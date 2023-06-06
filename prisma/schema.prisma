@@ -1,18 +1,47 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-generator client {
-    provider = "prisma-client-js"
-    previewFeatures = ["jsonProtocol"]
-}
-
 datasource db {
-    provider = "sqlite"
-    url      = env("DATABASE_URL")
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
-model Example {
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Experience {
     id        String   @id @default(cuid())
     createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+
+    title String @db.VarChar(255)
+    description String @db.LongText
+    thumbnail String @db.VarChar(255)
+    position String @db.VarChar(255)
+    place String @db.VarChar(255)
+    website String @db.VarChar(255)
+    startAt DateTime @db.DateTime(3)
+    endAt DateTime @db.DateTime(3)
+    isCurrent Boolean @default(false)
+    stacks TechStack[]
+}
+
+model Certificates {
+    id        String   @id @default(cuid())
+    createdAt DateTime @default(now())
+    
+    name String @db.VarChar(255)
+    link String @db.VarChar(255)
+    date DateTime @db.DateTime(3)
+}
+
+model TechStack {
+    id        String   @id @default(cuid())
+    createdAt DateTime @default(now())
+    
+    name String @db.VarChar(255)
+    link String @db.VarChar(255)
+    logo String @db.VarChar(255)
+    experiences Experience[]
 }
