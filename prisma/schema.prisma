@@ -11,10 +11,17 @@ generator client {
   provider = "prisma-client-js"
 }
 
+enum ExperienceEnum {
+    WORK
+    PROJECT
+    ORGANIZATION
+}
+
 model Experience {
     id        String   @id @default(cuid())
     createdAt DateTime @default(now())
 
+    type ExperienceEnum
     title String @db.VarChar(255)
     description String @db.LongText
     thumbnail String @db.VarChar(255)
@@ -25,6 +32,8 @@ model Experience {
     endAt DateTime @db.DateTime(3)
     isCurrent Boolean @default(false)
     stacks TechStack[]
+
+    media Media[]
 }
 
 model Certificates {
@@ -43,5 +52,14 @@ model TechStack {
     name String @db.VarChar(255)
     link String @db.VarChar(255)
     logo String @db.VarChar(255)
+    experiences Experience[]
+}
+
+model Media {
+    id        String   @id @default(cuid())
+    createdAt DateTime @default(now())
+    
+    name String @db.VarChar(255)
+    link String @db.VarChar(255)
     experiences Experience[]
 }
