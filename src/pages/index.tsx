@@ -5,8 +5,6 @@ import Link from "next/link";
 import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
-
   return (
     <>
       <div className="w-screen flex justify-center mt-8">
@@ -18,11 +16,9 @@ const Home: NextPage = () => {
         <p className="mt-12 text-[#1A1A1A] text-lg md:text-xl lg:text-2xl font-medium leading-relaxed">Currently Android Developer at <span className="underline"><a href="https://grow.google/intl/id_id/bangkit">Bangkit by Google, GoTo & Traveloka.</a></span> Still an undergraduate student of computer science at <span className="underline"><a href="https://ui.ac.id">University of Indonesia.</a></span></p>
       </div>
 
-      <div className="md:px-24 px-12 lg:px-48">
+      <div className="md:px-24 px-12 lg:px-48 pb-48">
         <Experience />
       </div>
-
-
     </>
   );
 };
