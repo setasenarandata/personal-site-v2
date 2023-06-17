@@ -9,36 +9,4 @@ export const experienceRouter = createTRPCRouter({
     })
     return experience
   }),
-  getWorks: publicProcedure.query( async ({ ctx }) => {
-    const works = await ctx.prisma.experience.findMany({
-      include: { stacks: true, media: true },
-      where: {
-        type: "WORK"
-      }
-    })
-
-    return works
-  }),
-
-  getProjects: publicProcedure.query( async ({ ctx }) => {
-    const projects = await ctx.prisma.experience.findMany({
-      include: { stacks: true, media: true },
-      where: {
-        type: "PROJECT"
-      }
-    })
-
-    return projects
-  }),
-
-  getOrganizations: publicProcedure.query( async ({ ctx }) => {
-    const organizations = await ctx.prisma.experience.findMany({
-      include: { stacks: true, media: true },
-      where: {
-        type: "ORGANIZATION"
-      }
-    })
-
-    return organizations
-  }),
 });
