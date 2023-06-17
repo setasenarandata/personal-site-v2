@@ -1,4 +1,6 @@
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
+import { Experience } from '@prisma/client'
+import { api } from '~/utils/api'
 
 const benefits = [
     'Competitive salaries',
@@ -9,7 +11,12 @@ const benefits = [
     'A great work environment',
 ]
 
-export default function Details() {
+interface MyProps {
+    id: string
+}
+
+export default function Details(props: MyProps) {
+    const { data, isLoading: loading } = api.experience.getOne.useQuery({ id: props.id })
     return (
         <>
             <div className="flex mx-auto bg-gray-900 bg-opacity-95 max-w-2xl flex-col sm:rounded-3xl lg:mx-0 lg:max-w-none lg:flex-row xl:gap-x-20">
