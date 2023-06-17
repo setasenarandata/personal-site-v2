@@ -90,7 +90,10 @@ export default function Experience() {
                         className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
                     >
                         {dataExperience?.map((data) => (
-                            <div onClick={() => setOpen(true)}>
+                            <div onClick={() => {
+                                setOpen(true)
+                                setExpId(data.id)
+                            }}>
                                 <li key={data.id}>
                                     <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={data.thumbnail} alt="" />
                                     <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{data.title}</h3>
@@ -129,7 +132,7 @@ export default function Experience() {
                                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                             >
-                                <Dialog.Panel className="relative transform overflow-hidden rounded-lg px-4 pb-4 pt-5 text-left transition-all sm:my-8 sm:w-full sm:p-6 bg-transparent">
+                                <Dialog.Panel className="relative transform overflow-hidden rounded-lg text-left transition-all sm:my-8 sm:w-full bg-transparent mx-32">
                                     <Details id={expId} />
                                 </Dialog.Panel>
                             </Transition.Child>
