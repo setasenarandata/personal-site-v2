@@ -30,7 +30,7 @@ export default function Details(props: MyProps) {
                                     className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 text-white sm:grid-cols-2"
                                 >
                                     {data?.stacks.map((item) => (
-                                        <a href={item.link}>
+                                        <a href={item.link} key={item.id}>
                                             <li key={item.id} className="flex gap-x-3">
                                                 <Image width={32} height={32} src={item.logo} alt={`${item.name}.png`} className=" flex-none" aria-hidden="true" />
                                                 {item.name}

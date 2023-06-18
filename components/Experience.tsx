@@ -64,7 +64,7 @@ export default function Experience() {
                     <Menu.Items className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div className="py-1">
                             {resources.map((item) => (
-                                <Menu.Item>
+                                <Menu.Item key={item.name}>
                                     <div onClick={() => setExperience(item.value)} key={item.name} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
                                         <div className="mt-1 flex flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                                             <item.icon className="h-4 w-4 text-gray-600 group-hover:text-slate-600" aria-hidden="true" />
