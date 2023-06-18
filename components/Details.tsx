@@ -50,8 +50,8 @@ export default function Details(props: MyProps) {
                                     ))}
                                 </ul>
                                 <div className="mt-10 flex">
-                                    <a href="#" className="text-sm font-semibold leading-6 text-indigo-400">
-                                        See our job postings <span aria-hidden="true">&rarr;</span>
+                                    <a href={data?.website} className="text-sm font-semibold leading-6 text-indigo-400">
+                                        Find Out More <span aria-hidden="true">&rarr;</span>
                                     </a>
                                 </div>
                             </div>
