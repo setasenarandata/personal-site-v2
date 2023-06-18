@@ -1,5 +1,5 @@
-import { DocumentArrowDownIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 import Experience from "components/Experience";
+import Footer from "components/Footer";
 import Headers from "components/Headers";
 import { type NextPage } from "next";
 import { AiFillGithub, AiFillLinkedin, AiOutlineInstagram, AiOutlineMail, AiOutlineFilePdf } from 'react-icons/ai';
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
 
         <div className="flex align-center mt-4 mb-8">
           {actions.map((item) => (
-            <div className="w-12">
+            <div className="w-12 hover:text-gray-600">
               <a href={item.link} key={item.id}>
                 {item.icon}
               </a>
@@ -64,6 +64,8 @@ const Home: NextPage = () => {
       <div className="md:px-24 px-12 lg:px-48 pb-48">
         <Experience />
       </div>
+
+      <Footer />
     </>
   );
 };

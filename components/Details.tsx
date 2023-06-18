@@ -1,17 +1,6 @@
-import { CheckCircleIcon } from '@heroicons/react/20/solid'
-import { Experience } from '@prisma/client'
 import { api } from '~/utils/api'
 import Loading from './Loading'
 import Image from 'next/image'
-
-const benefits = [
-    'Competitive salaries',
-    'Flexible work hours',
-    '30 days of paid vacation',
-    'Annual team retreats',
-    'Benefits for you and your family',
-    'A great work environment',
-]
 
 interface MyProps {
     id: string

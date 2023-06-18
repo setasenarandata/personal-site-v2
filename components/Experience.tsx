@@ -1,9 +1,8 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
-import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { BuildingOffice2Icon, CubeIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 import { api } from '~/utils/api'
-import exp from 'constants'
 import Loading from './Loading'
 import Details from './Details'
 
