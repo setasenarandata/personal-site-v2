@@ -51,8 +51,8 @@ const Home: NextPage = () => {
 
         <div className="flex align-center mt-4 mb-8">
           {actions.map((item) => (
-            <div className="w-12 hover:text-gray-600">
-              <a href={item.link} key={item.id}>
+            <div key={item.id} className="w-12 hover:text-gray-600">
+              <a href={item.link}>
                 {item.icon}
               </a>
             </div>
