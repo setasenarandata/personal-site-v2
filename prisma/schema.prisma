@@ -63,15 +63,3 @@ model Media {
     link        String       @db.VarChar(255)
     experiences Experience[]
 }
-
-// model ExperienceTechStacks {
-//     experience   Experience @relation(fields: [experienceId], references: [id])
-//     experienceId String
-//     techStack    TechStack  @relation(fields: [techStackId], references: [id])
-//     techStackId  String
-//     assignedAt   DateTime   @default(now())
-
-//     @@id([experienceId, techStackId])
-//     @@index([experienceId])
-//     @@index([techStackId])
-// }
