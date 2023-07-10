@@ -1,28 +1,51 @@
-# Create T3 App
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+![MBPPS](https://github.com/setasenarandata/personal-site-v2/assets/93756668/236eaad3-d927-4a30-9029-8900718b166f)
 
-## What's next? How do I make an app with this?
+# Personal Site v2
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+Welcome to the repository for my Personal Site v2! This project is open to everyone and you are free to use it for your own personal or professional purposes. However, I would like to ask you to please respect my work and keep the footer intact.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Usage
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+Feel free to clone, fork, or download this repository and modify it according to your needs. You can use it as a starting point for your website or customize it to suit your preferences.
 
-## Learn More
+## Features
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+- Responsive design
+- Clean and modern UI
+- Easy customization
+- SEO-friendly
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+![IP14PPS](https://github.com/setasenarandata/personal-site-v2/assets/93756668/80dabb19-a613-47b1-9669-18e098955077)
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
 
-## How do I deploy this?
+## Getting Started
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+To get started with this project, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/setasenarandata/personal-site-v2.git`
+2. Open the project in your preferred code editor.
+3. Customize the content, styles, and images to reflect your personal information and preferences.
+4. Deploy the website to your desired hosting platform. I highly recommend [Vercel](https://vercel.com/) btw!
+
+## How to populate the database
+1. Create [PlanetScale](https://planetscale.com) account
+2. Create new database
+3. Click on conenct to database and choose Prisma
+4. Create .env file and copy paste the variables from planetscale
+5. You can start populating through prisma studio: `npx prisma studio`
+6. Feel free to edit the database schema!
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute the code. However, please respect my work and keep the footer intact, as it attaches to the original author.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or would like to suggest improvements, please feel free to open an issue or submit a pull request.
+
+## Contact
+
+If you have any questions or need further clarification, you can reach me at [setasena93@gmail.com](mailto:setasena93@gmail.com).
+
+Thank you for your understanding and I hope you find this project useful!
