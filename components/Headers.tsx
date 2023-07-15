@@ -1,23 +1,12 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import { BookmarkSquareIcon, CalendarDaysIcon, LifebuoyIcon } from '@heroicons/react/24/outline'
+import {  HomeIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import { AiOutlineSafetyCertificate } from 'react-icons/ai'
 
 const resources = [
-  { name: 'Help center', description: 'Get all of your questions answered', href: '#', icon: LifebuoyIcon },
-  { name: 'Guides', description: 'Learn how to maximize our platform', href: '#', icon: BookmarkSquareIcon },
-  { name: 'Events', description: 'See meet-ups and other events near you', href: '#', icon: CalendarDaysIcon },
-]
-const recentPosts = [
-  { id: 1, title: 'Boost your conversion rate', href: '#', date: 'Mar 5, 2023', datetime: '2023-03-05' },
-  {
-    id: 2,
-    title: 'How to use search engine optimization to drive traffic to your site',
-    href: '#',
-    date: 'Feb 25, 2023',
-    datetime: '2023-02-25',
-  },
-  { id: 3, title: 'Improve your customer experience', href: '#', date: 'Feb 21, 2023', datetime: '2023-02-21' },
+  { name: 'Home', description: 'Welcome', href: '/', icon: HomeIcon },
+  { name: 'Certificates', description: 'Credentials of Setasena Randata', href: '/certificates', icon: AiOutlineSafetyCertificate },
 ]
 
 export default function Headers() {
@@ -53,27 +42,6 @@ export default function Headers() {
                   </div>
                 </div>
               ))}
-            </div>
-            <div className="bg-gray-50 p-8">
-              <div className="flex justify-between">
-                <h3 className="text-sm font-semibold leading-6 text-gray-500">Recent posts</h3>
-                <a href="#" className="text-sm font-semibold leading-6 text-indigo-600">
-                  See all <span aria-hidden="true">&rarr;</span>
-                </a>
-              </div>
-              <ul role="list" className="mt-6 space-y-6">
-                {recentPosts.map((post) => (
-                  <li key={post.id} className="relative">
-                    <time dateTime={post.datetime} className="block text-xs leading-6 text-gray-600">
-                      {post.date}
-                    </time>
-                    <a href={post.href} className="block truncate text-sm font-semibold leading-6 text-gray-900">
-                      {post.title}
-                      <span className="absolute inset-0" />
-                    </a>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </Popover.Panel>
