@@ -7,7 +7,7 @@ import Loading from './Loading'
 import Details from './Details'
 
 
-enum ExperienceEnum {
+export enum ExperienceEnum {
     Work = "My Work",
     Project = "My Project",
     Organization = "My Organization",
@@ -18,8 +18,12 @@ const resources = [
     { name: 'Organization', value: ExperienceEnum.Organization, icon: UserGroupIcon },
 ]
 
-export default function Experience() {
-    const [experience, setExperience] = useState<ExperienceEnum>(ExperienceEnum.Work)
+interface MyProps {
+    type: ExperienceEnum
+}
+
+export default function Experience(props: MyProps) {
+    const [experience, setExperience] = useState<ExperienceEnum>(props.type)
     const { data, isLoading: loading } = api.experience.getAll.useQuery()
     const [dataExperience, setDataExperience] = useState(data)
     const [open, setOpen] = useState(false)
@@ -37,7 +41,6 @@ export default function Experience() {
     }, [experience])
 
     useEffect(() => {
-        console.log("loading trpc")
         setDataExperience(data?.filter((item) => item.type === "WORK"))
         console.log(dataExperience?.length)
     }, [loading])

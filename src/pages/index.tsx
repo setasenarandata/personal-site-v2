@@ -1,7 +1,9 @@
-import Experience from "components/Experience";
+import Experience, { ExperienceEnum } from "components/Experience";
 import Footer from "components/Footer";
 import Headers from "components/Headers";
 import { type NextPage } from "next";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { AiFillGithub, AiFillLinkedin, AiOutlineInstagram, AiOutlineMail, AiOutlineFilePdf } from 'react-icons/ai';
 
 const actions = [
@@ -39,6 +41,31 @@ const actions = [
 ]
 
 const Home: NextPage = () => {
+  const router = useRouter();
+  const { query } = router;
+  const { type } = query;
+  const [selectedType, setSelectedType] = useState<ExperienceEnum>(ExperienceEnum.Work);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    switch (type) {
+      case "project":
+        setSelectedType(ExperienceEnum.Project);
+        break;
+      case "organization":
+        setSelectedType(ExperienceEnum.Organization);
+        break;
+      default:
+        setSelectedType(ExperienceEnum.Work);
+        break;
+    }
+  }, [type]);
+
+  useEffect(() => {
+    setLoading(false);
+  }, [selectedType])
+
+
   return (
     <>
       <div className="w-screen flex justify-center mt-8">
@@ -62,7 +89,12 @@ const Home: NextPage = () => {
       </div>
 
       <div className="md:px-24 px-12 lg:px-48 pb-48">
-        <Experience />
+        {!loading && (
+          <Experience type={selectedType}/>
+        )}
+        {loading && (
+          <p>Loading..</p>
+        )}
       </div>
 
       <Footer />
