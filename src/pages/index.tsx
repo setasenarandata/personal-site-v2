@@ -35,7 +35,7 @@ const actions = [
     id: 'action-5',
     title: 'Resume',
     icon: <AiOutlineFilePdf size={24} />,
-    link: 'https://drive.google.com/file/d/14WU3t8CUC8r8ROpHWb16EyHcbSOmTZY0/view?usp=sharing',
+    link: 'https://drive.google.com/file/d/1QkURsPnQZOFZ4SKrpjaYfFUy5fpNx-xy/view?usp=sharing',
   },
 
 ]
