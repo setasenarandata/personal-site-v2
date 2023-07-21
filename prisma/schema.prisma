@@ -40,9 +40,12 @@ model Certificates {
     id        String   @id @default(cuid())
     createdAt DateTime @default(now())
 
-    name String   @db.VarChar(255)
-    link String   @db.VarChar(255)
-    date DateTime @db.DateTime(3)
+    title     String @db.VarChar(255)
+    publisher String @db.VarChar(255)
+    year      String @db.VarChar(255)
+    imageUrl  String @db.VarChar(255)
+    href      String @db.VarChar(255)
+    isActive  Boolean @default(false)
 }
 
 model TechStack {
