@@ -74,7 +74,7 @@ const Home: NextPage = () => {
 
       <div className="md:px-24 px-12 pt-12 md:pt-24 pb-12 lg:px-48">
         <p className="text-[#1A1A1A] text-3xl md:text-5xl lg:text-6xl font-semibold leading-relaxed">Setasena Randata is a Software Engineer living and working in Jakarta.</p>
-        <p className="mt-12 text-[#1A1A1A] text-lg md:text-xl lg:text-2xl font-medium leading-relaxed">Currently Android Developer at <span className="underline"><a href="https://grow.google/intl/id_id/bangkit">Bangkit by Google, GoTo & Traveloka.</a></span> Still an undergraduate student of computer science at <span className="underline"><a href="https://ui.ac.id">University of Indonesia.</a></span></p>
+        <p className="mt-12 text-[#1A1A1A] text-lg md:text-xl lg:text-2xl font-medium leading-relaxed">Currently Back-End Engineer at <span className="underline"><a href="https://grow.google/intl/id_id/bangkit">Traveloka.</a></span> Still an undergraduate student of computer science at <span className="underline"><a href="https://ui.ac.id">University of Indonesia.</a></span></p>
 
         <div className="flex align-center mt-4 mb-8">
           {actions.map((item) => (
@@ -99,7 +99,7 @@ const Home: NextPage = () => {
 
       <Footer />
     </>
-  );
-};
+  )
+}
 
 export default Home;

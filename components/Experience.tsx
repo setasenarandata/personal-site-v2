@@ -30,6 +30,10 @@ export default function Experience(props: MyProps) {
 
     const [expId, setExpId] = useState("")
 
+    const formatDate = (date: Date): string => {
+        return date.toLocaleString('default', { month: 'short' });
+    };
+
     useEffect(() => {
         if (experience === ExperienceEnum.Work) {
             setDataExperience(data?.filter((item) => item.type === "WORK"))
@@ -98,7 +102,17 @@ export default function Experience(props: MyProps) {
                             }}>
                                 <li key={data.id}>
                                     <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={data.thumbnail} alt="" />
-                                    <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{data.title}</h3>
+                                    {data.isCurrent ?
+                                        <span className="mt-4 inline-flex items-center rounded-full bg-green-400/10 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-400/20">
+                                            {formatDate(data.startAt)}, {data.startAt.getFullYear()} - Present
+                                        </span>
+                                        :
+
+                                        <span className="mt-4 inline-flex items-center rounded-full bg-gray-400/10 px-2 py-1 text-xs font-medium text-gray-500 ring-1 ring-inset ring-gray-400/20">
+                                            {formatDate(data.startAt)} - {formatDate(data.endAt)}, {data.endAt.getFullYear()}
+                                        </span>
+                                    }
+                                    <h3 className="mt-2 text-lg font-semibold leading-8 tracking-tight text-gray-900">{data.title}</h3>
                                     <p className="text-base leading-7 text-gray-600">{data.position}</p>
                                 </li>
                             </div>
@@ -145,3 +159,5 @@ export default function Experience(props: MyProps) {
         </>
     )
 }
+
+

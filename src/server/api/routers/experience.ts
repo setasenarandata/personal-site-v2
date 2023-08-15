@@ -6,7 +6,8 @@ import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 export const experienceRouter = createTRPCRouter({
   getAll: publicProcedure.query( async ({ ctx }) => {
     const experiences = await ctx.prisma.experience.findMany({
-      include: { stacks: true, media: true }
+      include: { stacks: true, media: true },
+      orderBy: { startAt: 'desc' }
     })
     return experiences
   }),
