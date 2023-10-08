@@ -7,7 +7,7 @@ Welcome to the repository for my Personal Site v2! This project is open to every
 
 ## Usage
 
-Feel free to clone, fork, or download this repository and modify it according to your needs. You can use it as a starting point for your website or customize it to suit your preferences.
+Feel free to clone, fork, or download this repository and modify it according to your needs. Show me some love by leaving the footer as it is. You can use it as a starting point for your website or customize it to suit your preferences. 
 
 ## Features
 
@@ -30,10 +30,10 @@ To get started with this project, follow these steps:
 
 ## How to populate the database
 1. Create [PlanetScale](https://planetscale.com) account
-2. Create new database
-3. Click on conenct to database and choose Prisma
-4. Create .env file and copy paste the variables from planetscale
-5. You can start populating through prisma studio: `npx prisma studio`
+2. Create a new database
+3. Click on connect to database and choose Prisma
+4. Create a .env file and copy and paste the variables from Planetscale
+5. You can start populating through Prisma studio: `npx prisma studio`
 6. Feel free to edit the database schema!
 
 ## License
