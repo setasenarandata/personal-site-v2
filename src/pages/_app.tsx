@@ -2,6 +2,7 @@ import { type AppType } from "next/app";
 import { api } from "~/utils/api";
 import "~/styles/globals.css";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
@@ -19,7 +20,10 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="setasena, sena, setasena randata ramadanie, setasenarr, setasena93" />
       </Head>
-      <Component {...pageProps} />
+      <body>
+        <Component {...pageProps} />
+        <Analytics />
+      </body>
     </>
   )
 };
