@@ -15,7 +15,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png" />
         <link rel="icon" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.png" />
-        <meta name="description" content="Currently Android Developer at Bangkit by Google, GoTo & Traveloka. Still an undergraduate student of computer science at University of Indonesia." />
+        <meta name="description" content="Currently Backend Engineer at Traveloka. Still an undergraduate student of computer science at University of Indonesia." />
         <meta name="author" content="Setasena Randata Ramadanie" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="setasena, sena, setasena randata ramadanie, setasenarr, setasena93" />
